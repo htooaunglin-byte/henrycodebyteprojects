@@ -1,0 +1,18 @@
+CodeByte Sales & Products — source export
+
+Site: https://henrycodebyteprojects.codebyte-3867.chatgpt.site
+Saved version: 11
+Source commit: d843db4ae574528173ed8ee123def419a524ffb8
+
+This ZIP contains the tracked source code, logo, dependency lockfile, and database schema/migrations. Generated build caches and installed dependencies are excluded. Live database records and uploaded client documents are NOT included.
+
+VERCEL MIGRATION
+This is the original Sites source, not a Vercel-ready conversion.
+1. Adapt the vinext/Cloudflare build to a Vercel-supported setup.
+2. Replace Sites-provided authentication in app/chatgpt-auth.ts with verified authentication suitable for the new host. Do not trust user-supplied oai-authenticated-user-* headers on an external deployment.
+3. Adapt db/index.ts and db/raw.ts, which use Cloudflare D1, to the chosen database access method.
+4. Adapt app/api/documents/route.ts, which uses the R2 BUCKET binding, to the chosen document storage access method.
+5. Configure credentials on the destination host, then migrate live database records and uploaded files separately, preserving ownership mappings.
+6. Validate sign-in, private record access, editing, archive/restore, and document preview/upload/download before switching over.
+
+Exporting this ZIP does not change the live site.

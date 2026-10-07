@@ -1,0 +1,1 @@
+ALTER TABLE `projects` ADD `client` text DEFAULT '' NOT NULL;
